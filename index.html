@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Una Botillería a Más — Whisky y destilados de autor</title>
+<meta name="description" content="Botillería premium especializada en whisky, bourbon y single malt. Curaduría experta, catálogo de destilados y asesoría personalizada. Despacho a domicilio.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Una Botillería a Más — Whisky y destilados de autor">
+<meta property="og:description" content="Curaduría experta en whisky, bourbon y single malt. Catálogo, asesoría personalizada y catas privadas.">
+<meta property="og:image" content="/assets/logo.png">
+<meta property="og:locale" content="es_CL">
+
+<link rel="icon" href="/assets/logo.png" type="image/png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LiquorStore",
+  "name": "Una Botillería a Más",
+  "description": "Botillería premium especializada en whisky, bourbon y single malt, con curaduría experta, catálogo propio y asesoría personalizada.",
+  "image": "/assets/logo.png",
+  "telephone": "+56900000000",
+  "priceRange": "$$$",
+  "areaServed": "CL"
+}
+</script>
+
+<style>
+  :root{
+    --ink:#17130f;
+    --ink-2:#211b15;
+    --parchment:#ece2c9;
+    --amber:#c4903a;
+    --amber-light:#e9bd6d;
+    --copper:#8b4226;
+    --garnet:#4a1b1a;
+    --slate:#33404a;
+    --smoke:#3a342c;
+    --cream:#f3ecd8;
+    --line: rgba(243,236,216,0.16);
+    --line-dark: rgba(23,19,15,0.12);
+    --display: 'Fraunces', serif;
+    --body: 'Work Sans', sans-serif;
+    --mono: 'IBM Plex Mono', monospace;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--parchment); color:var(--ink); font-family:var(--body); line-height:1.5; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
+  img{max-width:100%; display:block;}
+  a{color:inherit; text-decoration:none;}
+  button{font:inherit; cursor:pointer; background:none; border:none; color:inherit;}
+  .container{max-width:1200px; margin:0 auto; padding:0 32px;}
+  .eyebrow{font-family:var(--mono); font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:var(--amber-light); display:flex; align-items:center; gap:10px;}
+  .eyebrow::before{content:''; width:22px; height:1px; background:var(--amber-light);}
+  .eyebrow--dark{color:var(--copper);}
+  .eyebrow--dark::before{background:var(--copper);}
+  h1,h2,h3{font-family:var(--display); font-weight:600; letter-spacing:-0.01em;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;} }
+
+  /* NAV */
+  .nav{position:fixed; top:0; left:0; right:0; z-index:200; display:flex; align-items:center; justify-content:space-between; padding:20px 32px; transition:background 0.4s ease, padding 0.4s ease, box-shadow 0.4s ease;}
+  .nav.scrolled{background:rgba(23,19,15,0.88); backdrop-filter:blur(14px); padding:13px 32px; box-shadow:0 1px 0 var(--line);}
+  .nav__brand img{height:32px; width:auto; filter:invert(1) brightness(1.6);}
+  .nav__links{display:flex; align-items:center; gap:32px;}
+  .nav__links a{font-size:13px; letter-spacing:0.03em; color:var(--cream); opacity:0.8; transition:opacity 0.25s ease;}
+  .nav__links a:hover{opacity:1;}
+  .nav__cta{font-family:var(--mono); font-size:12px; letter-spacing:0.05em; color:var(--ink); background:var(--amber); padding:9px 18px; border-radius:100px; transition:background 0.25s ease, transform 0.25s ease;}
+  .nav__cta:hover{background:var(--amber-light); transform:translateY(-1px);}
+  @media (max-width:860px){ .nav__links{display:none;} }
+
+  /* FULL-BLEED IMAGE SECTIONS */
+  .photo-section{position:relative; min-height:100vh; display:flex; align-items:flex-end; color:var(--cream); overflow:hidden;}
+  .photo-section__bg{position:absolute; inset:-6% -2%; background-size:cover; background-position:center; will-change:transform; transform:translateY(0) scale(1.06);}
+  .photo-section__scrim{position:absolute; inset:0;}
+  .photo-section__content{position:relative; z-index:2; width:100%; padding:0 32px 90px; max-width:1200px; margin:0 auto;}
+
+  /* HERO */
+  .hero{align-items:center;}
+  .hero .photo-section__scrim{background:linear-gradient(180deg, rgba(15,12,9,0.55) 0%, rgba(15,12,9,0.72) 55%, rgba(15,12,9,0.92) 100%);}
+  .hero .photo-section__content{padding-bottom:0; text-align:center; display:flex; flex-direction:column; align-items:center;}
+  .hero-logo{max-width:460px; width:80%; filter:invert(1) brightness(1.6); margin-bottom:22px;}
+  .hero p{font-size:18px; max-width:460px; color:rgba(243,236,216,0.82); margin-bottom:30px;}
+  .hero-actions{display:flex; gap:14px; flex-wrap:wrap; justify-content:center;}
+  .scroll-cue{position:absolute; bottom:28px; left:50%; transform:translateX(-50%); z-index:2; font-family:var(--mono); font-size:11px; letter-spacing:0.12em; color:rgba(243,236,216,0.55); text-transform:uppercase; display:flex; flex-direction:column; align-items:center; gap:8px;}
+  .scroll-cue span{width:1px; height:26px; background:linear-gradient(var(--amber-light), transparent); animation:pulse-down 1.8s ease-in-out infinite;}
+  @keyframes pulse-down{0%{opacity:0.2;} 50%{opacity:1;} 100%{opacity:0.2;}}
+
+  .btn{display:inline-flex; align-items:center; gap:8px; font-family:var(--mono); font-size:13px; letter-spacing:0.04em; padding:13px 22px; border-radius:100px; transition:transform 0.25s ease, background 0.25s ease, border-color 0.25s ease; border:1px solid transparent;}
+  .btn--solid{background:var(--amber); color:var(--ink);}
+  .btn--solid:hover{background:var(--amber-light); transform:translateY(-2px);}
+  .btn--ghost{border-color:rgba(243,236,216,0.4); color:var(--cream);}
+  .btn--ghost:hover{border-color:var(--amber-light); color:var(--amber-light); transform:translateY(-2px);}
+
+  /* STORY SECTIONS (image-forward, alternating) */
+  .story{min-height:92vh; display:grid; grid-template-columns:1fr 1fr;}
+  .story__media{position:relative; overflow:hidden;}
+  .story__media img{width:100%; height:100%; object-fit:cover; position:absolute; inset:0; transform:scale(1.04);}
+  .story__copy{background:var(--ink); color:var(--cream); display:flex; flex-direction:column; justify-content:center; padding:80px 64px;}
+  .story__copy h2{font-size:clamp(28px,3.4vw,42px); margin:16px 0 20px; line-height:1.15;}
+  .story__copy p{color:rgba(243,236,216,0.68); font-size:16.5px; max-width:440px;}
+  .story__num{font-family:var(--mono); font-size:12px; color:var(--amber-light); letter-spacing:0.1em;}
+  .story--reverse{grid-template-columns:1fr 1fr;}
+  .story--reverse .story__media{order:2;}
+  .story--reverse .story__copy{order:1;}
+  @media (max-width:860px){
+    .story, .story--reverse{grid-template-columns:1fr;}
+    .story__media{height:52vh; order:1 !important;}
+    .story__copy{order:2 !important; padding:56px 28px;}
+  }
+
+  .reveal{opacity:0; transform:translateY(28px); transition:opacity 0.7s ease, transform 0.7s ease;}
+  .reveal.in-view{opacity:1; transform:translateY(0);}
+
+  /* CATALOG */
+  .catalogo{background:var(--parchment); padding:120px 0;}
+  .section-head{max-width:640px; margin-bottom:20px;}
+  .section-head h2{font-size:clamp(30px,4vw,46px); margin-top:14px; line-height:1.12;}
+  .section-head p{margin-top:18px; font-size:17px; color:var(--smoke); max-width:520px;}
+
+  .filters{display:flex; gap:10px; flex-wrap:wrap; margin:36px 0 44px;}
+  .filter-btn{font-family:var(--mono); font-size:12px; letter-spacing:0.05em; padding:9px 18px; border-radius:100px; border:1px solid var(--line-dark); color:var(--smoke); transition:all 0.2s ease;}
+  .filter-btn.active, .filter-btn:hover{background:var(--ink); color:var(--cream); border-color:var(--ink);}
+
+  .cat-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:28px;}
+  .cat-card{position:relative; border-radius:8px; overflow:hidden; cursor:pointer; background:var(--ink); aspect-ratio:4/5; transition:transform 0.35s ease;}
+  .cat-card:hover{transform:translateY(-6px);}
+  .cat-card__img{position:absolute; inset:0; background-size:cover; background-position:center; transition:transform 0.5s ease;}
+  .cat-card:hover .cat-card__img{transform:scale(1.06);}
+  .cat-card.tint-scotch .cat-card__img{filter:sepia(0.35) saturate(1.5) hue-rotate(-8deg) brightness(0.7) contrast(1.05);}
+  .cat-card.tint-bourbon .cat-card__img{filter:sepia(0.5) saturate(1.7) hue-rotate(-18deg) brightness(0.65) contrast(1.1);}
+  .cat-card.tint-japones .cat-card__img{filter:grayscale(0.5) sepia(0.15) hue-rotate(160deg) saturate(1.3) brightness(0.6);}
+  .cat-card.tint-chileno .cat-card__img{filter:sepia(0.4) saturate(1.4) hue-rotate(-30deg) brightness(0.55) contrast(1.1);}
+  .cat-card__scrim{position:absolute; inset:0; background:linear-gradient(180deg, rgba(23,19,15,0.05) 0%, rgba(23,19,15,0.85) 100%);}
+  .cat-card__body{position:absolute; left:0; right:0; bottom:0; padding:26px; color:var(--cream); z-index:2;}
+  .cat-card__origin{font-family:var(--mono); font-size:11px; letter-spacing:0.1em; color:var(--amber-light); text-transform:uppercase;}
+  .cat-card__body h3{font-size:23px; margin:8px 0 10px;}
+  .cat-card__specs{font-family:var(--mono); font-size:11.5px; color:rgba(243,236,216,0.65); margin-bottom:10px;}
+  .cat-card__pills{display:flex; gap:6px; flex-wrap:wrap;}
+  .pill{font-family:var(--mono); font-size:10.5px; letter-spacing:0.03em; border:1px solid rgba(243,236,216,0.28); color:rgba(243,236,216,0.85); padding:4px 10px; border-radius:100px;}
+  .cat-card__hint{position:absolute; top:22px; right:22px; z-index:2; font-family:var(--mono); font-size:10.5px; color:rgba(243,236,216,0.7); border:1px solid rgba(243,236,216,0.3); padding:6px 12px; border-radius:100px;}
+  .cat-card.is-hidden{display:none;}
+
+  @media (max-width:760px){ .cat-grid{grid-template-columns:1fr;} }
+
+  /* LIGHTBOX */
+  .lightbox{position:fixed; inset:0; z-index:500; display:none; align-items:center; justify-content:center; padding:24px;}
+  .lightbox.is-open{display:flex;}
+  .lightbox__scrim{position:absolute; inset:0; background:rgba(10,8,6,0.86);}
+  .lightbox__panel{position:relative; z-index:2; max-width:920px; width:100%; max-height:88vh; overflow:auto; background:var(--ink); color:var(--cream); border-radius:10px; display:grid; grid-template-columns:1fr 1fr;}
+  .lightbox__media{position:relative; min-height:280px; background-size:cover; background-position:center;}
+  .lightbox__body{padding:44px 40px; display:flex; flex-direction:column; justify-content:center;}
+  .lightbox__body h3{font-size:30px; margin:10px 0 16px;}
+  .lightbox__body p{color:rgba(243,236,216,0.7); font-size:15.5px; margin-bottom:22px;}
+  .lightbox__specs{display:flex; flex-direction:column; gap:8px; font-family:var(--mono); font-size:12.5px; color:rgba(243,236,216,0.6); margin-bottom:22px;}
+  .lightbox__specs b{color:var(--amber-light); font-weight:500;}
+  .lightbox__close{position:absolute; top:18px; right:18px; z-index:3; width:38px; height:38px; border-radius:50%; background:rgba(243,236,216,0.12); color:var(--cream); font-size:18px; display:flex; align-items:center; justify-content:center;}
+  .lightbox__close:hover{background:rgba(243,236,216,0.22);}
+  @media (max-width:760px){ .lightbox__panel{grid-template-columns:1fr;} .lightbox__media{min-height:220px;} .lightbox__body{padding:30px 26px;} }
+
+  /* EXPERIENCIA */
+  .experiencia{background:var(--ink); color:var(--cream); padding:120px 0;}
+  .experiencia .section-head p{color:rgba(243,236,216,0.65);}
+  .exp-layout{display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; margin-top:40px;}
+  .exp-media{position:relative; border-radius:8px; overflow:hidden; aspect-ratio:4/5;}
+  .exp-media img{width:100%; height:100%; object-fit:cover;}
+  .exp-list{display:flex; flex-direction:column; gap:28px;}
+  .exp-item__num{font-family:var(--mono); font-size:12px; color:var(--amber-light); letter-spacing:0.08em;}
+  .exp-item h3{font-size:21px; margin:10px 0 10px; font-weight:600;}
+  .exp-item p{color:rgba(243,236,216,0.62); font-size:15px;}
+  @media (max-width:860px){ .exp-layout{grid-template-columns:1fr;} }
+
+  /* EVENTOS */
+  .eventos{min-height:70vh; display:flex; align-items:center;}
+  .eventos .photo-section__scrim{background:linear-gradient(90deg, rgba(74,27,26,0.92) 0%, rgba(74,27,26,0.6) 55%, rgba(23,19,15,0.35) 100%);}
+  .eventos .photo-section__content{padding:0 32px; display:flex; align-items:center;}
+  .eventos-inner{max-width:560px;}
+  .eventos h2{font-size:clamp(28px,3.6vw,42px); margin:16px 0 20px; line-height:1.15;}
+  .eventos p{color:rgba(243,236,216,0.8); font-size:16.5px; margin-bottom:28px;}
+  .eventos-list{list-style:none; display:flex; flex-direction:column; gap:12px; margin-bottom:30px;}
+  .eventos-list li{font-family:var(--mono); font-size:12.5px; color:rgba(243,236,216,0.88); padding-left:18px; position:relative;}
+  .eventos-list li::before{content:''; position:absolute; left:0; top:8px; width:6px; height:6px; border-radius:50%; background:var(--amber-light);}
+
+  /* CONTACTO */
+  .contacto{min-height:60vh; display:flex; align-items:center; text-align:center;}
+  .contacto .photo-section__scrim{background:linear-gradient(180deg, rgba(23,19,15,0.55) 0%, rgba(23,19,15,0.9) 100%);}
+  .contacto .photo-section__content{padding:0 32px; display:flex; flex-direction:column; align-items:center;}
+  .contacto h2{font-size:clamp(30px,4.4vw,50px); margin:16px auto 20px; max-width:680px; line-height:1.15;}
+  .contacto p{color:rgba(243,236,216,0.72); max-width:480px; margin:0 auto 30px;}
+
+  /* FOOTER */
+  .site-footer{background:var(--ink-2); color:rgba(243,236,216,0.55); padding:60px 0 30px;}
+  .footer-top{display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:30px; padding-bottom:40px; border-bottom:1px solid var(--line);}
+  .footer-brand img{height:30px; filter:invert(1) brightness(1.6); margin-bottom:14px;}
+  .footer-brand p{font-size:13px; max-width:260px; color:rgba(243,236,216,0.45);}
+  .footer-links{display:flex; gap:60px; flex-wrap:wrap;}
+  .footer-col h4{font-family:var(--mono); font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--amber-light); margin-bottom:14px;}
+  .footer-col a{display:block; font-size:14px; color:rgba(243,236,216,0.68); margin-bottom:10px; transition:color 0.2s ease;}
+  .footer-col a:hover{color:var(--amber-light);}
+  .footer-bottom{display:flex; justify-content:space-between; padding-top:24px; font-size:12.5px; flex-wrap:wrap; gap:10px;}
+  .footer-bottom a{color:rgba(243,236,216,0.7);}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="#" class="nav__brand"><img src="/assets/logo.png" alt="Una Botillería a Más"></a>
+  <div class="nav__links">
+    <a href="#catalogo">Catálogo</a>
+    <a href="#experiencia">Asesoría</a>
+    <a href="#eventos">Catas</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+  <a class="nav__cta" href="https://wa.me/56900000000" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+</nav>
+
+<!-- HERO -->
+<header class="photo-section hero" id="hero">
+  <div class="photo-section__bg" data-parallax style="background-image:url('https://images.pexels.com/photos/6530946/pexels-photo-6530946.jpeg?auto=compress&cs=tinysrgb&w=1920');"></div>
+  <div class="photo-section__scrim"></div>
+  <div class="photo-section__content">
+    <img class="hero-logo" src="/assets/logo.png" alt="Una Botillería a Más">
+    <p>Whisky, bourbon y single malt seleccionados por paladares expertos, para quienes beben con intención — no por cantidad.</p>
+    <div class="hero-actions">
+      <a class="btn btn--solid" href="#catalogo">Ver el catálogo</a>
+      <a class="btn btn--ghost" href="https://wa.me/56900000000" target="_blank" rel="noopener">Habla con tu asesor</a>
+    </div>
+  </div>
+  <div class="scroll-cue"><span></span>Desliza</div>
+</header>
+
+<!-- STORY 1 -->
+<section class="story reveal">
+  <div class="story__media">
+    <img src="https://images.pexels.com/photos/18988807/pexels-photo-18988807.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Alambique de cobre en destilería">
+  </div>
+  <div class="story__copy">
+    <p class="story__num eyebrow">El oficio</p>
+    <h2>No vendemos botellas.<br>Curamos momentos.</h2>
+    <p>Cada etiqueta que llega a nuestras repisas pasa antes por un panel de cata interno. Buscamos partidas pequeñas, destilerías con historia y añadas que no se repiten dos veces.</p>
+  </div>
+</section>
+
+<!-- STORY 2 (reverse) -->
+<section class="story story--reverse reveal">
+  <div class="story__media">
+    <img src="https://images.pexels.com/photos/13255984/pexels-photo-13255984.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Barricas de roble en bodega de añejamiento">
+  </div>
+  <div class="story__copy">
+    <p class="story__num eyebrow">La espera</p>
+    <h2>El tiempo no se apura.<br>Se respeta.</h2>
+    <p>Trabajamos directo con importadores especializados, sin intermediarios de bodega genérica, para que el precio refleje el añejamiento real y no el marketing.</p>
+  </div>
+</section>
+
+<!-- STORY 3 -->
+<section class="story reveal">
+  <div class="story__media">
+    <img src="https://images.pexels.com/photos/14856491/pexels-photo-14856491.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Copa de whisky con hielo, vista superior">
+  </div>
+  <div class="story__copy">
+    <p class="story__num eyebrow">El ritual</p>
+    <h2>Cada copa cuenta<br>una historia distinta.</h2>
+    <p>Un hielo tallado, la temperatura correcta, el vaso adecuado. Te ayudamos a servir tu selección como se merece, no solo a comprarla.</p>
+  </div>
+</section>
+
+<!-- CATALOGO -->
+<section class="catalogo" id="catalogo">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow eyebrow--dark">Catálogo</p>
+      <h2>Cuatro mundos, un mismo estándar.</h2>
+      <p>Toca cualquier etiqueta para ver notas de cata completas. No perseguimos marcas populares: perseguimos carácter.</p>
+    </div>
+    <div class="filters reveal">
+      <button class="filter-btn active" data-filter="all">Todos</button>
+      <button class="filter-btn" data-filter="scotch">Single Malt Escocés</button>
+      <button class="filter-btn" data-filter="bourbon">Bourbon Kentucky</button>
+      <button class="filter-btn" data-filter="japones">Whisky Japonés</button>
+      <button class="filter-btn" data-filter="chileno">Chileno Artesanal</button>
+    </div>
+    <div class="cat-grid reveal">
+
+      <div class="cat-card tint-scotch" data-cat="scotch"
+           data-title="Single Malt Escocés"
+           data-origin="Escocia · Speyside / Islay"
+           data-specs="Añejamiento 12–18 años · Alambique único"
+           data-notes="Destilados de un solo alambique y una sola destilería, con turba, sal marina y roble como firma. Ideal para quien busca profundidad antes que suavidad. Se sirve mejor en copa tipo Glencairn, con un par de gotas de agua para abrir el aroma."
+           data-img="https://images.pexels.com/photos/733768/pexels-photo-733768.jpeg?auto=compress&cs=tinysrgb&w=1400">
+        <div class="cat-card__img" style="background-image:url('https://images.pexels.com/photos/733768/pexels-photo-733768.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+        <div class="cat-card__scrim"></div>
+        <span class="cat-card__hint">Ver notas</span>
+        <div class="cat-card__body">
+          <p class="cat-card__origin">Escocia</p>
+          <h3>Single Malt Escocés</h3>
+          <p class="cat-card__specs">12–18 años · Speyside / Islay</p>
+          <div class="cat-card__pills"><span class="pill">Turba</span><span class="pill">Miel</span><span class="pill">Sal marina</span></div>
+        </div>
+      </div>
+
+      <div class="cat-card tint-bourbon" data-cat="bourbon"
+           data-title="Bourbon de Kentucky"
+           data-origin="Estados Unidos · Kentucky"
+           data-specs="Maíz mín. 51% · Barrica de roble nuevo tostado"
+           data-notes="Dulzor natural del maíz, vainilla y caramelo de barrica nueva. El punto de entrada perfecto para quien viene del ron o del pisco y quiere subir de categoría, con un perfil más amable al primer sorbo."
+           data-img="https://images.pexels.com/photos/14856491/pexels-photo-14856491.jpeg?auto=compress&cs=tinysrgb&w=1400">
+        <div class="cat-card__img" style="background-image:url('https://images.pexels.com/photos/14856491/pexels-photo-14856491.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+        <div class="cat-card__scrim"></div>
+        <span class="cat-card__hint">Ver notas</span>
+        <div class="cat-card__body">
+          <p class="cat-card__origin">Estados Unidos</p>
+          <h3>Bourbon de Kentucky</h3>
+          <p class="cat-card__specs">Roble nuevo tostado · Maíz 51%+</p>
+          <div class="cat-card__pills"><span class="pill">Vainilla</span><span class="pill">Caramelo</span><span class="pill">Roble</span></div>
+        </div>
+      </div>
+
+      <div class="cat-card tint-japones" data-cat="japones"
+           data-title="Whisky Japonés"
+           data-origin="Japón · Estilo blended y single malt"
+           data-specs="Agua mineral de montaña · Destilación de precisión"
+           data-notes="Precisión antes que golpe: destilerías que tratan cada corte como un ritual. Notas florales y una textura sedosa que se sirve casi siempre con hielo tallado a mano, en highball o directo."
+           data-img="https://images.pexels.com/photos/6530946/pexels-photo-6530946.jpeg?auto=compress&cs=tinysrgb&w=1400">
+        <div class="cat-card__img" style="background-image:url('https://images.pexels.com/photos/6530946/pexels-photo-6530946.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+        <div class="cat-card__scrim"></div>
+        <span class="cat-card__hint">Ver notas</span>
+        <div class="cat-card__body">
+          <p class="cat-card__origin">Japón</p>
+          <h3>Whisky Japonés</h3>
+          <p class="cat-card__specs">Blended &amp; single malt</p>
+          <div class="cat-card__pills"><span class="pill">Floral</span><span class="pill">Sedoso</span><span class="pill">Umami</span></div>
+        </div>
+      </div>
+
+      <div class="cat-card tint-chileno" data-cat="chileno"
+           data-title="Whisky Chileno Artesanal"
+           data-origin="Chile · Producción en pequeños lotes"
+           data-specs="Cebada de origen nacional · Maduración acelerada por clima"
+           data-notes="La nueva generación de destiladores chilenos, con cebada local y climas que aceleran la maduración. Una categoría que recién empieza a escribir su historia, con perfiles especiados y de cereal marcado."
+           data-img="https://images.pexels.com/photos/13255984/pexels-photo-13255984.jpeg?auto=compress&cs=tinysrgb&w=1400">
+        <div class="cat-card__img" style="background-image:url('https://images.pexels.com/photos/13255984/pexels-photo-13255984.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+        <div class="cat-card__scrim"></div>
+        <span class="cat-card__hint">Ver notas</span>
+        <div class="cat-card__body">
+          <p class="cat-card__origin">Chile</p>
+          <h3>Whisky Chileno Artesanal</h3>
+          <p class="cat-card__specs">Pequeños lotes · Cebada nacional</p>
+          <div class="cat-card__pills"><span class="pill">Cereal</span><span class="pill">Frutos secos</span><span class="pill">Especiado</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox__scrim" data-close></div>
+  <div class="lightbox__panel">
+    <button class="lightbox__close" data-close aria-label="Cerrar">✕</button>
+    <div class="lightbox__media" id="lbMedia"></div>
+    <div class="lightbox__body">
+      <p class="eyebrow" id="lbOrigin"></p>
+      <h3 id="lbTitle"></h3>
+      <p id="lbNotes"></p>
+      <div class="lightbox__specs"><span id="lbSpecs"></span></div>
+      <a class="btn btn--solid" id="lbCta" href="https://wa.me/56900000000" target="_blank" rel="noopener">Consultar disponibilidad</a>
+    </div>
+  </div>
+</div>
+
+<!-- EXPERIENCIA -->
+<section class="experiencia" id="experiencia">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Asesoría personalizada</p>
+      <h2>Tu paladar, nuestra guía.</h2>
+      <p>Comprar whisky premium no debería sentirse como adivinar una etiqueta. Cada compra importante pasa por una conversación real, no por un catálogo genérico.</p>
+    </div>
+    <div class="exp-layout">
+      <div class="exp-media reveal">
+        <img src="https://images.pexels.com/photos/733768/pexels-photo-733768.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Copa y botella de whisky sobre madera">
+      </div>
+      <div class="exp-list reveal">
+        <div class="exp-item">
+          <p class="exp-item__num">Asesoría 1:1</p>
+          <h3>Conversación, no catálogo</h3>
+          <p>Nos cuentas qué has tomado antes y qué buscas. Te recomendamos 2 o 3 opciones reales, con argumentos, nunca la lista completa.</p>
+        </div>
+        <div class="exp-item">
+          <p class="exp-item__num">Maridaje a medida</p>
+          <h3>Más allá del hielo</h3>
+          <p>Armamos maridajes con chocolate de origen, quesos madurados o cigarros, pensados para la ocasión y el destilado que elegiste.</p>
+        </div>
+        <div class="exp-item">
+          <p class="exp-item__num">Regalos corporativos</p>
+          <h3>Con historia, no con logo</h3>
+          <p>Seleccionamos etiquetas con una historia que contar y armamos la presentación, para regalos que no terminan en la repisa sin abrir.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTOS -->
+<section class="photo-section eventos" id="eventos">
+  <div class="photo-section__bg" data-parallax style="background-image:url('https://images.pexels.com/photos/13255984/pexels-photo-13255984.jpeg?auto=compress&cs=tinysrgb&w=1920');"></div>
+  <div class="photo-section__scrim"></div>
+  <div class="photo-section__content">
+    <div class="eventos-inner reveal">
+      <p class="eyebrow">Experiencias</p>
+      <h2>Catas privadas, para ir más allá de la copa.</h2>
+      <p>Grupos reducidos, en tu casa o en la nuestra. Guiamos la cata, explicamos el porqué de cada nota y dejamos que la conversación se alargue.</p>
+      <ul class="eventos-list">
+        <li>Cata guiada de 4 a 6 etiquetas, con ficha de notas.</li>
+        <li>Formato para grupos de 6 a 14 personas.</li>
+        <li>Disponible en modalidad presencial o a domicilio.</li>
+      </ul>
+      <a class="btn btn--solid" href="https://wa.me/56900000000" target="_blank" rel="noopener">Agenda tu cata</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="photo-section contacto" id="contacto">
+  <div class="photo-section__bg" data-parallax style="background-image:url('https://images.pexels.com/photos/6530946/pexels-photo-6530946.jpeg?auto=compress&cs=tinysrgb&w=1920');"></div>
+  <div class="photo-section__scrim"></div>
+  <div class="photo-section__content">
+    <div class="reveal">
+      <p class="eyebrow">Despacho</p>
+      <h2>Directo a tu puerta, con el cuidado que la botella merece.</h2>
+      <p>Escríbenos por WhatsApp para confirmar cobertura, horarios de despacho y disponibilidad de la etiqueta que buscas.</p>
+      <a class="btn btn--solid" href="https://wa.me/56900000000" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="/assets/logo.png" alt="Una Botillería a Más">
+        <p>Botillería premium especializada en whisky, bourbon y single malt. Curaduría experta y asesoría personalizada.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Explorar</h4>
+          <a href="#catalogo">Catálogo</a>
+          <a href="#experiencia">Asesoría</a>
+          <a href="#eventos">Catas privadas</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <a href="https://wa.me/56900000000" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="mailto:contacto@unabotilleriaamas.cl">contacto@unabotilleriaamas.cl</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Una Botillería a Más. Venta de alcohol solo a mayores de 18 años.</span>
+      <a href="https://modobacan.cl" target="_blank" rel="noopener">Diseño web por modobacan.cl</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Nav on scroll
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40), { passive:true });
+
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in-view'); io.unobserve(e.target); } });
+  }, { threshold:0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Simple parallax on full-bleed background images
+  const parallaxEls = document.querySelectorAll('[data-parallax]');
+  function updateParallax(){
+    parallaxEls.forEach(el => {
+      const rect = el.parentElement.getBoundingClientRect();
+      const progress = 1 - Math.min(Math.max(rect.top / window.innerHeight, -1), 1);
+      const shift = (progress - 0.5) * 40;
+      el.style.transform = `translateY(${shift}px) scale(1.06)`;
+    });
+  }
+  window.addEventListener('scroll', () => requestAnimationFrame(updateParallax), { passive:true });
+  updateParallax();
+
+  // Catalog filters
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const catCards = document.querySelectorAll('.cat-card');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      catCards.forEach(card => {
+        card.classList.toggle('is-hidden', filter !== 'all' && card.dataset.cat !== filter);
+      });
+    });
+  });
+
+  // Lightbox
+  const lightbox = document.getElementById('lightbox');
+  const lbMedia = document.getElementById('lbMedia');
+  const lbTitle = document.getElementById('lbTitle');
+  const lbOrigin = document.getElementById('lbOrigin');
+  const lbNotes = document.getElementById('lbNotes');
+  const lbSpecs = document.getElementById('lbSpecs');
+
+  catCards.forEach(card => {
+    card.addEventListener('click', () => {
+      lbMedia.style.backgroundImage = `url('${card.dataset.img}')`;
+      lbTitle.textContent = card.dataset.title;
+      lbOrigin.textContent = card.dataset.origin;
+      lbNotes.textContent = card.dataset.notes;
+      lbSpecs.textContent = card.dataset.specs;
+      lightbox.classList.add('is-open');
+    });
+  });
+  document.querySelectorAll('[data-close]').forEach(el => el.addEventListener('click', () => lightbox.classList.remove('is-open')));
+  window.addEventListener('keydown', (e) => { if(e.key === 'Escape') lightbox.classList.remove('is-open'); });
+</script>
+
+</body>
+</html>
