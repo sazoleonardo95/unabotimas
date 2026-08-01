@@ -315,13 +315,15 @@
     <div class="section-head reveal">
       <p class="eyebrow">Catálogo</p>
       <h2>Todo para la<br>junta <em>perfecta</em>.</h2>
-      <p>Vinos, destilados y carnes para el asado, en un solo pedido. Toca cualquier producto para ver el detalle completo.</p>
+      <p>Vinos, destilados, cervezas y carnes para el asado, en un solo pedido. Toca cualquier producto para ver el detalle completo.</p>
     </div>
     <div class="filters reveal">
       <button class="filter-btn active" data-filter="all">Todos</button>
       <button class="filter-btn" data-filter="vinos">Vinos</button>
       <button class="filter-btn" data-filter="destilados">Destilados</button>
+      <button class="filter-btn" data-filter="cervezas">Cervezas</button>
       <button class="filter-btn" data-filter="carnes">Carnes</button>
+      <button class="filter-btn" data-filter="otros">Otros</button>
     </div>
     <div class="cat-grid reveal">
 
@@ -394,24 +396,75 @@
       </div>
 
       <div class="cat-card" data-cat="vinos"
-           data-title="Vinos de la Casa"
+           data-title="Vino Tinto Reserva"
            data-origin="Valle Central, Chile"
-           data-specs="Tintos, blancos y rosados · Por botella"
-           data-notes="Una selección corta pero bien pensada, para acompañar desde el asado hasta la sobremesa. Nada pretencioso: vinos que se disfrutan en la mesa, con amigos, sin protocolo."
-           data-img="https://images.pexels.com/photos/3730914/pexels-photo-3730914.jpeg?auto=compress&cs=tinysrgb&w=1400">
-        <div class="cat-card__img" style="background-image:url('https://images.pexels.com/photos/3730914/pexels-photo-3730914.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+           data-specs="Cabernet Sauvignon · Carmenère"
+           data-notes="El que no puede faltar en el asado. Cuerpo y taninos suaves, pensado para acompañar carne a la parrilla sin competir con el sabor del fuego."
+           data-img="https://images.pexels.com/photos/5791661/pexels-photo-5791661.jpeg?auto=compress&cs=tinysrgb&w=1400">
+        <div class="cat-card__img" style="background-image:url('https://images.pexels.com/photos/5791661/pexels-photo-5791661.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
         <div class="cat-card__scrim"></div>
         <span class="cat-card__hint">Ver notas</span>
         <div class="cat-card__body">
           <p class="cat-card__origin">Chile</p>
-          <h3>Vinos de la Casa</h3>
-          <p class="cat-card__specs">Tintos · Blancos · Rosados</p>
-          <div class="cat-card__pills"><span class="pill">Frutal</span><span class="pill">Fácil de tomar</span><span class="pill">Para compartir</span></div>
+          <h3>Vino Tinto Reserva</h3>
+          <p class="cat-card__specs">Cabernet Sauvignon · Carmenère</p>
+          <div class="cat-card__pills"><span class="pill">Cuerpo medio</span><span class="pill">Para el asado</span></div>
+        </div>
+      </div>
+
+      <div class="cat-card" data-cat="vinos"
+           data-title="Vino Blanco"
+           data-origin="Valle de Casablanca, Chile"
+           data-specs="Sauvignon Blanc · Chardonnay"
+           data-notes="Fresco y directo, ideal para la previa o para tomar helado en un día de calor. Menos protocolo que el tinto, igual de bueno con amigos."
+           data-img="https://images.pexels.com/photos/30279443/pexels-photo-30279443.jpeg?auto=compress&cs=tinysrgb&w=1400">
+        <div class="cat-card__img" style="background-image:url('https://images.pexels.com/photos/30279443/pexels-photo-30279443.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+        <div class="cat-card__scrim"></div>
+        <span class="cat-card__hint">Ver notas</span>
+        <div class="cat-card__body">
+          <p class="cat-card__origin">Chile</p>
+          <h3>Vino Blanco</h3>
+          <p class="cat-card__specs">Sauvignon Blanc · Chardonnay</p>
+          <div class="cat-card__pills"><span class="pill">Fresco</span><span class="pill">Para la previa</span></div>
+        </div>
+      </div>
+
+      <div class="cat-card" data-cat="vinos"
+           data-title="Espumante"
+           data-origin="Valle Central, Chile"
+           data-specs="Brut · Extra Brut"
+           data-notes="Para cuando hay algo que celebrar, aunque sea que es viernes. Se sirve bien frío y siempre sube el ánimo de la junta."
+           data-img="https://images.pexels.com/photos/30538464/pexels-photo-30538464.jpeg?auto=compress&cs=tinysrgb&w=1400">
+        <div class="cat-card__img" style="background-image:url('https://images.pexels.com/photos/30538464/pexels-photo-30538464.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+        <div class="cat-card__scrim"></div>
+        <span class="cat-card__hint">Ver notas</span>
+        <div class="cat-card__body">
+          <p class="cat-card__origin">Chile</p>
+          <h3>Espumante</h3>
+          <p class="cat-card__specs">Brut · Extra Brut</p>
+          <div class="cat-card__pills"><span class="pill">Para brindar</span><span class="pill">Bien frío</span></div>
+        </div>
+      </div>
+
+      <div class="cat-card" data-cat="cervezas"
+           data-title="Cerveza Artesanal"
+           data-origin="Cervecerías nacionales"
+           data-specs="IPA · Lager · Stout"
+           data-notes="Selección rotativa de cervecerías chilenas chicas. Buena para la previa, mejor todavía cuando el asado ya está prendido."
+           data-img="https://images.pexels.com/photos/7893798/pexels-photo-7893798.jpeg?auto=compress&cs=tinysrgb&w=1400">
+        <div class="cat-card__img" style="background-image:url('https://images.pexels.com/photos/7893798/pexels-photo-7893798.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+        <div class="cat-card__scrim"></div>
+        <span class="cat-card__hint">Ver notas</span>
+        <div class="cat-card__body">
+          <p class="cat-card__origin">Nacional</p>
+          <h3>Cerveza Artesanal</h3>
+          <p class="cat-card__specs">IPA · Lager · Stout</p>
+          <div class="cat-card__pills"><span class="pill">Cervecerías chicas</span><span class="pill">Rotativo</span></div>
         </div>
       </div>
 
       <div class="cat-card" data-cat="carnes"
-           data-title="Carnes para el Asado"
+           data-title="Vacuno Premium"
            data-origin="Selección nacional"
            data-specs="Cortes premium · Listos para la parrilla"
            data-notes="Entraña, asado de tira, punta picana — los cortes que no fallan. Los pedimos frescos y los despachamos junto con el vino o el trago, para que el asado no dependa de tres locales distintos."
@@ -421,9 +474,60 @@
         <span class="cat-card__hint">Ver notas</span>
         <div class="cat-card__body">
           <p class="cat-card__origin">Nacional</p>
-          <h3>Carnes para el Asado</h3>
+          <h3>Vacuno Premium</h3>
           <p class="cat-card__specs">Entraña · Asado de tira · Picana</p>
           <div class="cat-card__pills"><span class="pill">Fresco</span><span class="pill">Listo para la parrilla</span></div>
+        </div>
+      </div>
+
+      <div class="cat-card" data-cat="carnes"
+           data-title="Pollo"
+           data-origin="Selección nacional"
+           data-specs="Trutro · Pechuga · Alitas"
+           data-notes="Para el que no come tanta carne roja, o simplemente para tener variedad en la parrilla. Siempre cae bien y se cocina rápido mientras se espera el resto."
+           data-img="https://images.pexels.com/photos/5704254/pexels-photo-5704254.jpeg?auto=compress&cs=tinysrgb&w=1400">
+        <div class="cat-card__img" style="background-image:url('https://images.pexels.com/photos/5704254/pexels-photo-5704254.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+        <div class="cat-card__scrim"></div>
+        <span class="cat-card__hint">Ver notas</span>
+        <div class="cat-card__body">
+          <p class="cat-card__origin">Nacional</p>
+          <h3>Pollo</h3>
+          <p class="cat-card__specs">Trutro · Pechuga · Alitas</p>
+          <div class="cat-card__pills"><span class="pill">Rápido</span><span class="pill">Para todos</span></div>
+        </div>
+      </div>
+
+      <div class="cat-card" data-cat="carnes"
+           data-title="Embutidos y Chorizos"
+           data-origin="Selección nacional"
+           data-specs="Chorizos · Longanizas"
+           data-notes="El infaltable choripán mientras se cocina el resto del asado. Nadie debería tener hambre en los primeros 20 minutos."
+           data-img="https://images.pexels.com/photos/6025/pexels-photo-6025.jpeg?auto=compress&cs=tinysrgb&w=1400">
+        <div class="cat-card__img" style="background-image:url('https://images.pexels.com/photos/6025/pexels-photo-6025.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+        <div class="cat-card__scrim"></div>
+        <span class="cat-card__hint">Ver notas</span>
+        <div class="cat-card__body">
+          <p class="cat-card__origin">Nacional</p>
+          <h3>Embutidos y Chorizos</h3>
+          <p class="cat-card__specs">Chorizos · Longanizas</p>
+          <div class="cat-card__pills"><span class="pill">Choripán</span><span class="pill">Mientras se espera</span></div>
+        </div>
+      </div>
+
+      <div class="cat-card" data-cat="otros"
+           data-title="Hielo"
+           data-origin="Despacho local"
+           data-specs="Bolsas de 2 kg y 5 kg"
+           data-notes="Para que el blanco, el espumante y la cerveza lleguen fríos — y sigan así toda la junta. Se pide junto con el resto, sin vueltas extra."
+           data-img="https://images.pexels.com/photos/12987267/pexels-photo-12987267.jpeg?auto=compress&cs=tinysrgb&w=1400">
+        <div class="cat-card__img" style="background-image:url('https://images.pexels.com/photos/12987267/pexels-photo-12987267.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+        <div class="cat-card__scrim"></div>
+        <span class="cat-card__hint">Ver notas</span>
+        <div class="cat-card__body">
+          <p class="cat-card__origin">Despacho local</p>
+          <h3>Hielo</h3>
+          <p class="cat-card__specs">Bolsas de 2 kg y 5 kg</p>
+          <div class="cat-card__pills"><span class="pill">Frío toda la noche</span></div>
         </div>
       </div>
 
