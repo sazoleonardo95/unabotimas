@@ -598,7 +598,7 @@
 </button>
 <audio id="bgAudio" loop preload="none">
   <!-- Reemplaza esta línea por tu track con licencia (Epidemic Sound, Artlist, Pixabay Music, etc.) -->
-  <source src="/assets/music-loop.mp3" type="audio/mpeg">
+  <source src="/assets-music-loop.mp3" type="audio/mpeg">
 </audio>
 
 <!-- LIGHTBOX -->
@@ -934,8 +934,8 @@
         audioToggle.classList.add('is-playing');
         audioToggle.setAttribute('aria-pressed', 'true');
       }).catch(() => {
-        // No hay track cargado todavía en /assets/music-loop.mp3
-        console.warn('No se pudo reproducir: agrega un archivo de audio con licencia en /assets/music-loop.mp3');
+        // No hay track cargado todavía en /assets-music-loop.mp3
+        console.warn('No se pudo reproducir: verifica que /assets-music-loop.mp3 exista en la raíz del repo.');
       });
     } else {
       bgAudio.pause();
